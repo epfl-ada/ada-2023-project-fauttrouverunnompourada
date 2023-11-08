@@ -18,6 +18,12 @@ Gives info on movies (release, countries, languages...)
 movie_data = pd.read_csv('../MovieSummaries/movie.metadata.tsv', delimiter='\t', header=None)
 movie_data.rename(columns={0: 'Wiki ID', 1: 'Freebase ID', 2: 'Movie name', 3: 'Release date', 4: 'Revenue', 5: 'Runtime', 6: 'Languages', 7: 'Countries', 8: 'Genres'}, inplace=True)
 
+# Change release dates to datetime objects
+movie_data['Release date'] = pd.to_datetime(movie_data['Release date'], errors='coerce')
+
+# Drop rows with invalid dates
+movie_data = movie_data.dropna(subset=['Release date'])
+
 '''
 NAME CLUSTERS
 Links character names to Freebase ID
@@ -39,5 +45,37 @@ TVTROPES CLUSTERS
 Connects characters to achetypal character categories
 '''
 
-tvtropes = pd.read_csv('../MovieSummaries/tvtropes.clusters.txt', delimiter='\t', header=None)
-tvtropes.rename(columns={0: 'Character type', 1: 'Example'}, inplace=True)
+tvtropes_path = r'../MovieSummaries/tvtropes.clusters.txt'
+
+types = []
+characters = []
+movies = []
+ids = []
+actors = []
+
+with open(tvtropes_path, 'r', encoding='utf-8') as file:
+    for line in file:
+        parts = line.strip().split('\t')
+        if len(parts) == 2:
+            name = parts[0]
+            data = eval(parts[1]) 
+            character = data.get('char', '')
+            movie = data.get('movie', '')
+            _id = data.get('id', '')
+            actor = data.get('actor', '')
+
+            types.append(name)
+            characters.append(character)
+            movies.append(movie)
+            ids.append(_id)
+            actors.append(actor)
+
+data = {
+    'Character type': types,
+    'Character name': characters,
+    'Movie': movies,
+    'Freebase ID': ids,
+    'Actor name': actors
+}
+
+tvtropes = pd.DataFrame(data)
