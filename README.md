@@ -20,16 +20,20 @@ During our researches we are trying to answer several questions:
 - What makes profitable and prestigious movie for each country and time period ?
 - What model gives the best result when we enter actor's data in respect to his career path choice and other requisites (language, gender...) ?
 
-### Additional datasets
+## Additional datasets
 
 We have decided to extend the data that were provided to us in order to improve our analysis of the cinematographical landscape we are currently in and to offer you the best expertise on the market.
 
 In addition to the gross revenue of movies, we decided to take into account their viewer-based ratings of the on IMDb website in order to judge their commercial success. Of course, your typical hollywoodian block-buster movie will generate a lot of money, but we are sure that you are not *only* money-driven and wish to leave your viewers satisfied. This is why we will also take these ratings into consideration when providing our expertise.
 
-### Methods
+## Methods
 
-### Timeline
+A revoir demain
 
-### Organisation
+## Timeline
+On va le faire
+
+## Organisation
+Encore plus
 
 ### Questions?
