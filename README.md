@@ -19,8 +19,9 @@ We eagerly anticipate your rise as the next ADAgency&trade; superstar!
 ### Research Questions
 
 Throughout our research, we are trying to answer several questions:
-- In a field as diverse as cinematography, how does one split a given set of information in order to evaluate our model in the most optimal way?
-- How to best predict the financial/critical success of a specific production according to actor and movie-based variables?
+- Find out which auditions (external data) best suit an actor in respect to his career goal (critical or monetary focused) as well as his previous experience and characteristics. 
+- Does the suitable actor differ based on the desired outcome: critical acclaim or financial success?
+- What impact does an actor's previous experience have on a movie's success?
 
 ### Additional datasets
 
