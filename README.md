@@ -92,7 +92,7 @@ Step 9: **Deadline Milestone 3 22.12.2023**
 | Ali           |  |
 | Benjamin      | Scraping of data from IMDb website, creation of dataframe python files, README writing, plotting |
 | Foaleng       |  |
-| Thomas        |  |
+| Thomas        | Creating comprehensive documentation, including a detailed readme file. Preprocessing phase by preparing the data for analysis. Implementing a parsing mechanism to assess the roles of characters within movie summaries, distinguishing between primary and secondary roles. |
 | Yaniss        |  |
 
 ### Questions
