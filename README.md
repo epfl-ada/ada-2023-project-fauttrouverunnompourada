@@ -68,11 +68,22 @@ To conclude our study, we will prepare a roleplay data story which shows our res
 
 ### Timeline
 
-**17.11.2023 - Milestone P2 deadline**
+Step 1 to 3: **Deadline milestone 2 17.11.2023**
 
-**01.12.2023 - Homework 2 deadline**
+Step 4: 25.11.2023
 
-**22.12.2023 - Milestone P3 deadline**
+*Homework 2: 01.12.2023*
+
+Step 5: 05.12.2023
+
+Step 6: 10.12.2023
+
+Step 7: 15.12.2023
+
+Step 8: 19.12.2023
+
+Step 9: **Deadline Milestone 3 22.12.2023**
+
 
 ### Organisation
 
