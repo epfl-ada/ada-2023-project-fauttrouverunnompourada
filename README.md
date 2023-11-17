@@ -37,29 +37,29 @@ In the future, we also wish to collect additional movie and actor data that we h
 
 ### Methods
 
-####Part 1 : Data preparation
+#### Part 1 : Data preparation
 **Step 1: Familiarisation to data set and planification
 Before jumping into a project, we take time to understand the initial data collection. The first step involves visualising the data to gauge its completeness and evaluate the project feasibility. Finally, we understand what data could be scraped to complete our dataset to achieve our goals.
 
-**Step 2: Data scraping
+**Step 2: Data scraping**
 Actors are typically driven by either financial gain or prestige. Therefore, it's essential to enhance our dataset by incorporating a metric for film prestige. We opted for IMDB movie ratings to fulfill this requirement. Additionally, we're leveraging the IMDB dataset to supplement our movie box office revenue data. Once again, visualization is employed to validate and deepen our comprehension of the data.
 
-**Step 3: Cleaning of data
+**Step 3: Cleaning of data**
 Visualization aids in spotting outliers, which can often be errors that have entered the dataset inadvertently. For instance, instances like actors listed with a height of 510 meters or a negative age can be identified and addressed. Furthermore, when crucial values contain NaN (missing values), the respective data entries containing these missing values are removed to maintain data integrity.
 
-**Step 4: Identification of primary or secondary role
+**Step 4: Identification of primary or secondary role**
 By parsing summaries, we'll evaluate each character's role as primary or secondary. This distinction becomes crucial for building a model later, with the following structure: 
 Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables (to be determined), Primary actor variables (to be determined), Secondary actor variables (to be determined)
 
-####Part 2: Model selection and assessment
-**Step 5: Model selection
+#### Part 2: Model selection and assessment
+**Step 5: Model selection**
 Choosing a model requires grasping the linearity between variables and the output. The first step thus involves visualising the data to pinpoint the ideal model for our predictions. Using our observations, we'll select the model that aligns best with our dataset. According to our model a splitting of the data will be needed for building coherent models (splitting based on country/time of production). Furthermore, variable selection through correlation analysis will also be required based on the selected models.
 
-**Step 6: Model assessment
+**Step 6: Model assessment**
 Following model training through cross-validation, different models are tested with never-seen external scraped movie data. Our best models will be chosen for application.
 
-####Part 3: Application
-**Step 7: Exploring research questions
+#### Part 3: Application
+**Step 7: Exploring research questions**
 In this final phase, we will leverage our model to address the research questions by delving into its operational intricacies and experimenting with diverse input variables.
 
 
