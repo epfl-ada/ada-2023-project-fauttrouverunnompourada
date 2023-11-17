@@ -79,3 +79,10 @@ data = {
 }
 
 tvtropes = pd.DataFrame(data)
+
+'''
+MOVIE DATA W/ MORE REVENUES, RATINGS & AWARDS
+Contains more revenues than movie_data, and also ratings and awards for movies
+'''
+
+movie_data_scraped = pd.read_csv("scraped_data/revenue_vs_rating_vs_awards.csv")
