@@ -8,7 +8,7 @@
 
 ### Abstract
 
-[Insert Abstract]
+[Welcome to]
 
 ### Research Questions
 
