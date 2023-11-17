@@ -89,11 +89,11 @@ Step 9: **Deadline Milestone 3 22.12.2023**
 
 | Agency Worker | Job |
 |:-------------:|-----|
-| Ali           |  |
-| Benjamin      | Scraping of data from IMDb website, creation of dataframe python files, README writing, plotting |
-| Foaleng       |  |
-| Thomas        | Creating comprehensive documentation, including a detailed readme file. Preprocessing phase by preparing the data for analysis. Implementing a parsing mechanism to assess the roles of characters within movie summaries, distinguishing between primary and secondary roles. |
-| Yaniss        |  |
+| Ali           | Initial data visualisation. Data cleaning. Model selection. Explore first research question.|
+| Benjamin      | Data scraping from IMDb website. Data cleaning. Model assesment. Creating data story. |
+| Foaleng       | Project plannification. Primary and secondary role indentification. Model selection. Explore third research question.|
+| Thomas        | Project plannification. Data cleaning. Primary and secondary role indentification. Model assesment. Creating data story.|
+| Yaniss        | Initial data visualisation. Data cleaning. Model selection. Explore second research question. |
 
 ### Questions
 
