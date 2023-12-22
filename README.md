@@ -49,14 +49,22 @@ Visualization aids in spotting outliers, which can often be errors that have ent
 By parsing summaries, we'll evaluate each character's role as primary or secondary. This distinction becomes crucial for building a model later, with the following structure: 
 Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables (to be determined), Primary actor variables (to be determined), Secondary actor variables (to be determined)
 
-#### Part 2: Model selection and assessment
+#### Part 2: Features study
+**Step 4: Features study**  
+  -*Gender study*  
+  -*Space study*  
+  -*Ethnicity study*  
+  -*Time study*  
+  -
+  
+#### Part 3: Model selection and assessment
 **Step 5: Model tuning and training**
 We split the data into a train and test dataset. We tune three different tree-based models, XGBRegressor from xgboost, GradientBoostingRegressor from sklearn and RandomForestRegressor from sklearn, using cross validation. Then, we train them to predict IMDB rating and revenue. We get six different models, with 2 of each type, with one predicting revenue and the other IMDB rating.
 
 **Step 6: Model assessment and selection**
 Following model training, the different models are tested with the test data. We use RMSE, MAE and look at the distribution of the predictions of each model to determine which should be used for IMDB rating and which should be used for revenue.
 
-#### Part 3: Application
+#### Part 4: Application
 **Step 7: Model Application**
 In this phase, we will use the models to show which specificties (e.g. runtime or actor sex) someone's movie should have based on whether he wants critical or monetary success and what type of movie he wants to make.
 
