@@ -22,8 +22,8 @@ Throughout our research, we are trying to answer several questions:
 - Question on gender
 - Question on space
 - Question on ethnicity
-- How does release year affect IMDB rating and revenue and are there any genre trends that we can identify
-- Can we build a model that allows us to predict revenue and IMDB rating with high accuracy
+- How does release year affect IMDB rating and revenue and are there any trends specific to genres?
+- Can we build a model that allows us to predict revenue and IMDB rating with high accuracy?
 
 ### Additional datasets
 
