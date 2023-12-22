@@ -1,0 +1,297 @@
+/* Réinitialise les marges, les rembourrages et définit la police de caractères par défaut */
+html,
+
+
+
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(245, 245, 245, 0.834);
+}
+
+
+/* Styles pour la section d'introduction */
+.intro-section {
+    height: 100vh;
+    background: radial-gradient(circle at 10% 31%, white -393%, black 117%);
+    display: flex;
+
+    justify-content: center;
+    color: rgb(252, 249, 249);
+    background-color: black;
+}
+
+.Titre-feature h1{
+    text-align: center;
+}
+
+
+
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+   
+}  
+
+@keyframes slideDescend {
+    0% {
+      transform: translateY(-30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideMonte {
+    0% {
+      transform: translateY(30%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+
+
+.img-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: slideMonte 2s ease-in-out;
+    margin-top: -22%
+}
+.left img{
+    width: 300px;
+    height: 300px;
+}
+.right img{
+    width: 300px;
+    height: 300px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+}
+
+.right h1 {
+    text-align: center;
+}
+
+
+/* Styles pour l'indicateur de défilement */
+.scroll-down {
+    position: absolute;
+    bottom: 20px; /* Positionne l'indicateur de défilement en bas de la page */
+    font-size: 40px;
+    color:burlywood; /* Couleur du texte en blanc */
+    cursor: pointer; /* Curseur pointeur pour indiquer que c'est interactif */
+}
+/* Styles pour la section d'un acteur réussi */
+
+
+
+
+
+
+
+
+/* Styles pour le graphique à secteurs */
+
+.doughnut {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+
+#container {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+}
+
+.bar-container {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Styles pour les paragraphes des sections */  
+.Countriy-feature p,
+.genre-features p
+{
+    color: #555;
+    text-align: justify; /* Couleur du texte pour les paragraphes (à personnaliser) */
+}
+
+
+/* Styles pour les titres des sections */
+.genre-features h2 {
+    color: #333; /* Couleur du texte pour les titres (à personnaliser) */
+    text-align: center;
+}
+.genre-features h1 {
+    color: #333; /* Couleur du texte pour les titres (à personnaliser) */
+    text-align: center;
+}
+.genre-features{
+    margin-top: 10px;    /* Ajoute une marge en haut de 20 pixels */
+    margin-bottom: 170px;
+    display: flex;
+   background-color: whitesmoke;
+} 
+
+.Countriy-feature{
+    margin-top: 10px;    /* Ajoute une marge en haut de 20 pixels */
+    margin-bottom: 180px;
+    display: flex;
+    background: whitesmoke
+    
+}
+.Countriy-feature h2{
+    text-align: center;
+}
+
+.decades-feature{
+    margin-top: 10px;    /* Ajoute une marge en haut de 20 pixels */
+    margin-bottom: 180px;
+    display: flex;
+    background: whitesmoke
+    
+}
+.decades-feature h2 {
+    text-align: center; /* Couleur du texte pour les titres (à personnaliser) */
+}
+
+.nouveau-feature{
+    margin-top: 90px;    /* Ajoute une marge en haut de 20 pixels */
+    margin-bottom: 100px;
+    background: whitesmoke
+
+}
+.nouveau-feature h1 {
+    text-align: center;
+}
+
+
+
+/* TRANSITION */
+
+/* .yellow{
+    height: 100vh;
+} */
+.tag{
+    
+    height: 100vh;
+}
+
+.tag {
+  opacity: 0;
+  transform: translate(0, 10vh);
+  transition: all 1s;
+}
+
+.tag.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+  display: flex;
+  /* justify-content: space-between; Alignement des éléments sur l'axe horizontal */
+   
+}
+
+.black {
+    background: radial-gradient(circle at 10% 31%, white -393%, black 117%);
+    display: flex;
+    color: whitesmoke;
+}
+
+.black h2{
+    text-align: center;
+}
+
+.Pays{
+    height :100vh;
+    background-color: whitesmoke;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+.Pays p{
+    text-align: center;
+}
+
+/* test */
+
+/* test */
+
+/* TRANSITION */
+
+
+
+
+
+.presentation-feature{
+    margin-top: 90px;    /* Ajoute une marge en haut de 20 pixels */
+    margin-bottom: 100px;
+    display :flex;
+    background: black;
+}
+
+.presentation-feature h2{
+    text-align: center;
+    color: antiquewhite;
+}
+
+
+
+/* POUR LES BOUTONS A LA FIN */
+/* Styles pour le label associé au select */
+label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  /* Styles pour le select */
+  select {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: inline-block;
+    box-sizing: border-box;
+  }
+  
+  /* Styles pour le hover du select */
+  select:hover {
+    border-color: #888;
+  }
+  
+  /* Styles pour le focus du select */
+  select:focus {
+    border-color: #555;
+    outline: none;
+  }
+  
+  /* Styles pour les options du select */
+  option {
+    background-color: #fff;
+    color: #333;
+  }
+  
+  /* Styles pour le hover des options du select */
+  option:hover {
+    background-color: #eee;
+  }
+  

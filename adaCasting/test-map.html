@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css"> <!-- Liaison au fichier CSS externe -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Carte</title>
+    <!-- leafletjs CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css" />
+    <!-- leafletjs JS -->
+
+
+
+
+    <!-- Include MODULES -->
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-map.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-data-adapter.min.js"></script>
+    <script src="https://cdn.anychart.com/geodata/latest/custom/world/world.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.15/proj4.js"></script>
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+
+    <!-- Load d3.js -->
+    <script src="https://d3js.org/d3.v4.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js"></script>
+    <script src="scripts.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+
+
+    <!-- SCROLL EFFECT  -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</head>
+
+<body>
+
+        <!-- Section d'introduction -->
+        <div class="intro-section">
+
+            <!-- Contenu textuel de l'introduction -->
+
+            <div class="left">
+                <p style="font-family: 'Monoton', sans-serif; font-size: 65px; text-align: center; margin: 0; animation: slideDescend 2s ease-in-out; z-index: 5;">
+                    ADA CASTING
+                    <button onclick="callModelForest()">HEY</button>
+
+                </p>
+
+                <div class="img-logo">
+                    <img src="./logoo.png" alt="logo"/>
+                </div>
+               
+            </div>
+            <div class="right">
+            <div class="intro-content">
+                <h1>AdaCasting </h1> <!-- Titre principal -->
+                <h2>Where Your Role Finds its Ada-ctor ! </h2>
+            </div>
+
+
+            <div class="intro-content_l"> <!-- Titre principal -->
+                <p>Cinema, a dimension where dreams come to life and every image tells a captivating story!</P>
+                    <p> It's a world where spotlights light up not only the screen, but also the hearts and minds of audiences the world over.</P>
+                </P> And its industry is a market that's not about to die, and you're about to make your mark in this lucrative industry!.</p> <!-- Description du projet -->
+            </div>
+
+            </div>
+            <!-- Indicateur de défilement -->
+            <div class="scroll-down">
+                <p>↓ APPUIE ICI</p>
+            </div>
+        </div>
+    
+    
+    
+    
+    
+    </section>
+
+
+        <section class="Titre-feature">
+            <h1>Une palette de genre !</h1>
+        </section>
+
+        <!-- Le reste du contenu sera ajouté dans les étapes suivantes -->
+    
+        <!-- Section pour les caractéristiques d'un acteur réussi -->
+        <section class="genre-features">
+
+            <div class="left" style="flex: 0.8;margin-left: 50px;">
+
+                <h1> Variété de Genre : Les genres majeurs du cinéma !</h1>
+                <p>Le monde incroyable du cinéma se démarque par sa diversité extraordinaire de genres, offrant ainsi aux acteurs une myriade de choix excitants à explorer!</p>
+                <p> Des émotions intenses des drames aux éclats de rire des comédies, en passant par l'adrénaline palpitante des films d'action, chaque genre offre une expérience unique pour les acteurs 🎬✨.</p>
+                <ul>
+                    <li><strong>25 genres différents ! </strong></li>
+                    <li><strong> more than 30'000 movies </strong></li>
+                    <li><strong>Et une industrie qui gravit</strong></li>
+                </ul>
+            </div>
+
+
+            <div class="right"> 
+
+                
+                <h1>Une palette de genre ! </h1>
+                
+                <div class="doughnut" style >
+
+                    <canvas id="myChart"></canvas>
+
+                </div>
+
+            </div>
+            
+            
+
+        </section>
+
+
+        <section class="Titre-feature">
+            <h1>Un choix vaste à travers le monde !</h1>
+        </section>
+
+        <section class="Countriy-feature">
+
+            <div class="left" style="flex: 1.7">
+
+                <h2>Le Monde du Cinéma en Carte : Une Diversité de Films Épars sur Tous les Continents</h2>
+
+                <div id="regions_div" style="width: 700px; height: 400px; margin: auto;">></div>
+
+            </div>
+        
+            <div class="right" style="margin-left: 20px; margin-right: 20px;">
+
+
+
+                <p>La sphère cinématographique, riche en diversité culturelle, transcende les frontières nationales pour offrir aux acteurs une expérience captivante.</p>
+
+                <p>Chaque lieu de production contribue à une expérience distinctive, enrichissant le répertoire des acteurs et élargissant les horizons de l'industrie du cinéma. 🌍🎥✨</p>
+
+                <ul>
+                    <li><strong> 123 ! </strong></li>
+                    <li><strong> 5 acteurs majeurs !</strong></li>
+                
+                </ul>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <section class="Titre-feature">
+            <h1>Et pour toutes les périodes !</h1>
+        </section>
+
+        <section class="decades-feature">
+
+            <div class="left" style="margin-left: 20px; margin-right: 20px;">
+
+                <h2>Exploration Cinématographique Année par Année</h2>
+                <p>Le monde incroyable du cinéma se démarque par sa diversité extraordinaire de genres, offrant ainsi aux acteurs une myriade de choix excitants à explorer!</p>
+                <p> Des émotions intenses des drames aux éclats de rire des comédies, en passant par l'adrénaline palpitante des films d'action, chaque genre offre une expérience unique pour les acteurs 🎬✨.</p>
+                <ul>
+                        <li><strong>plus de 30 000 films répartis en 12 décennies ! </strong></li>
+                        <li><strong>Chaque décennie tout autant riche qu'une autre !</strong></li>
+                        <li><strong>Et une industrie qui ne cesse de progresser !</strong></li>
+                </ul>
+
+            </div>            
+
+
+            <div class="right" style="margin-left: 20px; margin-right: 20px;">
+
+                <h2 style="text-align: center;">Les films à travers les décennies !</h2>
+
+
+                <div class="bar-container">
+                    <canvas id="barChart"></canvas>
+                </div> 
+
+
+            </div>
+            
+
+        </section>
+
+
+        <!-- <section class="yellow"><h1>foobar</h1></section> -->
+
+        <section class="tag black">
+
+            <div class="left" style="margin-left: 20px; margin-right: 20px;">
+
+                <h1>AdaCasting est là pour toi et pour t'accompagner jusqu'à la réussite</h1>
+                <h1>Succès critique ? Succès monétaire ? Les deux ?</h1>
+                <h1>Nous sommes là pour t'accompagner pas par pas et t'aider à atteindre tes objectifs !</h1>
+
+            </div>            
+
+
+            <div class="right" style="margin-left: 20px; margin-right: 20px;">
+
+                <div class="image_oscar">
+                    <img src="./oscar_image.jpeg" alt="logo"  style="margin: auto; display: block;">
+                </div>
+                    
+            </div>
+            
+
+        </section>
+
+        <section class="Pays">
+
+            <h1>Ta carrière à travers le monde </h1>
+            <p> AdaAgency se démarque par sa polyvalence mais également par les nombreux bureaux situés partout à travers le momde</p>
+            <p> il est important d'être partout pour accompagner nos acteurs à chaque endroit où la réussite pourrait leur sourir</p>
+            <p> Les ingénieurs en Datascience de chez adagency ont décider de se focaliser sur 25 pays afin de décoter le marché le plus propice pour nos client</p>
+            <br>
+            <p> Les ingénieurs se sont penchés sur les différents territoires pour voir lequel est le plus avantageux pour nos clients</p>
+
+            <p>selon les graphes générés en laboratoire, notre entreprise a pu voir que les notes varient assez peu mais ne sont pour le moins pas similaires</p>
+            
+
+            
+
+
+        </section>
+
+
+
+        <canvas id="boxPlotRevenue" width="400" height="400"></canvas>
+
+        <script>
+            // Charger les données JSON
+            fetch('box_plot_revenue.json')
+                .then(response => response.json())
+                .then(boxPlotData => {
+                    // Créer le graphique avec Chart.js
+                    const ctx = document.getElementById('boxPlotRevenue').getContext('2d');
+                    const boxPlotChart = new Chart(ctx, {
+                        type: 'boxplot',
+                        data: boxPlotData,
+                        options: {
+                            responsive: true,
+                            legend: {
+                                position: 'top',
+                            },
+                            title: {
+                                display: true,
+                                text: 'Box Plot Chart',
+                            },
+                        },
+                    });
+                });
+        </script>
+
+
+    <canvas id="boxPlotRating" width="400" height="400"></canvas>
+
+    <script>
+        // Charger les données JSON
+        fetch('box_plot_revenue.json')
+            .then(response => response.json())
+            .then(boxPlotData => {
+                // Créer le graphique avec Chart.js
+                const ctx = document.getElementById('boxPlotRating').getContext('2d');
+                const boxPlotChart = new Chart(ctx, {
+                    type: 'boxplot',
+                    data: boxPlotData,
+                    options: {
+                        responsive: true,
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Box Plot Chart',
+                        },
+                    },
+                });
+            });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <section>
+
+            <h1>MODELE ISSUS DU MACHINE LEARNING</h1>
+
+
+            <label> Âge </label>
+            <input />
+
+            <label>Taille</label>
+            <input />
+
+            <label for="choix">Langue</label>
+            <select id="choix" name="choix">
+                <option value="Tamil Language-onehot">Tamil Language</option>
+                <option value="Hindi Language-onehot">Hindi Language</option>
+                <option value="Malayalam Language-onehot">Malayalam Language</option>
+                <option value="German Language-onehot">German Language</option>
+                <option value="Japanese Language-onehot">Japanese Language</option>
+                <option value="Korean Language-onehot">Korean Language</option>
+                <option value="Spanish Language-onehot">Spanish Language</option>
+                <option value="Italian Language-onehot">Italian Language</option>
+                <option value="French Language-onehot">French Language</option>
+                <option value="Standard Mandarin-onehot">Standard Mandarin</option>
+                <option value="Standard Cantonese-onehot">Standard Cantonese</option>
+                <option value="Bengali Language-onehot">Bengali Language</option>
+                <option value="Cantonese-onehot">Cantonese</option>
+                <option value="Telugu language-onehot">Telugu Language</option>
+                <option value="Russian Language-onehot">Russian Language</option>
+                <option value="Portuguese Language-onehot">Portuguese Language</option>
+                <option value="Urdu Language-onehot">Urdu Language</option>
+                <option value="Arabic Language-onehot">Arabic Language</option>
+                <option value="Tagalog language-onehot">Tagalog Language</option>
+                <option value="Swedish Language-onehot">Swedish Language</option>
+            </select>
+
+
+            <label for="ethnicity">Ethnicity</label>
+            <select id="ethnicity" name="ethnicity">
+                <option value="White_x">White</option>
+                <option value="Black/African American_x">Black/African American</option>
+                <option value="South Asian_x">South Asian</option>
+                <option value="East Asian_x">East Asian</option>
+                <option value="American Indian/Alaska Native_x">American Indian/Alaska Native</option>
+                <option value="Pacific Islander_x">Pacific Islander</option>
+                <option value="Arab/Middle East_x">Arab/Middle East</option>
+                <option value="Central and South Americans_x">Central and South Americans</option>
+                <option value="Other_x">Other</option>
+            </select>
+            
+
+            <label for="pays">Pays</label>
+            <select id="pays" name="pays">
+                <option value="United States of America-onehot">United States of America</option>
+                <option value="United Kingdom-onehot">United Kingdom</option>
+                <option value="India-onehot">India</option>
+                <option value="Canada-onehot">Canada</option>
+                <option value="Germany-onehot">Germany</option>
+                <option value="Japan-onehot">Japan</option>
+                <option value="South Korea-onehot">South Korea</option>
+                <option value="Argentina-onehot">Argentina</option>
+                <option value="France-onehot">France</option>
+                <option value="Spain-onehot">Spain</option>
+                <option value="Ireland-onehot">Ireland</option>
+                <option value="Hong Kong-onehot">Hong Kong</option>
+                <option value="China-onehot">China</option>
+                <option value="Russia-onehot">Russia</option>
+                <option value="Australia-onehot">Australia</option>
+                <option value="Italy-onehot">Italy</option>
+                <option value="Mexico-onehot">Mexico</option>
+                <option value="New Zealand-onehot">New Zealand</option>
+                <option value="Brazil-onehot">Brazil</option>
+                <option value="Belgium-onehot">Belgium</option>
+                <option value="Denmark-onehot">Denmark</option>
+                <option value="Sweden-onehot">Sweden</option>
+                <option value="Netherlands-onehot">Netherlands</option>
+                <option value="Philippines-onehot">Philippines</option>
+            </select>
+
+
+            <label for="choix">Sexe</label>
+            <select id="choix" name="choix">
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+                <!-- Ajoutez autant d'options que nécessaire -->
+            </select>
+
+            <label for="choix">Rôle</label>
+            <select id="choix" name="choix">
+                <option value="P">Primaire</option>
+                <option value="S">Secondaire</option>
+                <!-- Ajoutez autant d'options que nécessaire -->
+            </select>
+
+
+        </section>
+
+
+ 
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+  
+
+
+</body>
+
+</html>
