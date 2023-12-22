@@ -53,7 +53,7 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
 
 #### Part 2: Features study
 **Step 5: Features study**  
-  - *Gender study*  
+  - We make visualizations to see which genres are most done by each gender. And, by doing a matching to remove cofounders, we analyse whether sex influence ratings and revenue in each genre 
   - *Space study*  
   - We compare countries revenue and IMDB ratings so we can rank them. We run a Shapiro-Wilk to determine that they're not distributed normally. Once we see that, we use a Pruskal-Walis test to see whether the differences are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
   - We make plots that allow us to see changes in IMDB rating and revenue through time for each genre 
