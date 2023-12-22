@@ -25,15 +25,13 @@ Throughout our research, we are trying to answer several questions:
 
 ### Additional datasets
 
-Lately, the agency crawlers have worked to bring new information for our analysis. For now, the two additional datasets are:
+Lately, the agency crawlers have worked to bring new information for our analysis. The two additional datasets are:
 - The user ratings of every movie from the IMDb website (at least every movie that had a rating). This will allow the agency to analyse the success of a movie based on two criteria: box-office revenue and critical acclaim.
 - The awards won and award nominations of every movie, also from the IMDb website. This allows us to judge even better how a certain movie was received, not only by the public, but also by the industry.
 
 We have also completed the box-office revenue data by grabbing from IMDb every revenue that was not previously there.
 
 All of this scraping was made using the [OMDb API](https://www.omdbapi.com/).
-
-In the future, we also wish to collect additional movie and actor data that we have not used to train our model in order to get some testing data. We will probably use the [Cinemagoer](https://cinemagoer.readthedocs.io/en/latest/) library to do so.
 
 ### Methods
 
@@ -53,10 +51,10 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
 
 #### Part 2: Model selection and assessment
 **Step 5: Model selection**
-Choosing a model requires grasping the linearity between variables and the output. The first step thus involves visualising the data to pinpoint the ideal model for our predictions. Using our observations, we'll select the model that aligns best with our dataset. According to our model a splitting of the data will be needed for building coherent models (splitting based on country/time of production). Furthermore, variable selection through correlation analysis will also be required based on the selected models.
+We split the data into a train and test dataset. We tune three different tree-based models, XGBRegressor from xgboost, GradientBoostingRegressor from sklearn and RandomForestRegressor from sklearn, using cross validation. Then, we train them to predict IMDB rating and revenue. We get six different models, with 2 of each type, with one predicting revenue and the other IMDB rating.
 
 **Step 6: Model assessment**
-Following model training through cross-validation, different models are tested with never-seen external scraped movie data. Our best models will be chosen for application.
+Following model training, the different models are tested with the test data. We use RMSE, MAE and look at the distribution of the predictions of each model to determine which should be used.
 
 #### Part 3: Application
 **Step 7: Exploring research questions**
