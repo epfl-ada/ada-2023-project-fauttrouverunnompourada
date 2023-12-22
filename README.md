@@ -45,17 +45,17 @@ Before jumping into a project, we take time to understand the initial data colle
 Actors are typically driven by either financial gain or prestige. Therefore, it's essential to enhance our dataset by incorporating a metric for film prestige. We opted for IMDB movie ratings to fulfill this requirement. Additionally, we're leveraging the IMDB dataset to supplement our movie box office revenue data. Once again, visualization is employed to validate and deepen our comprehension of the data.
 
 **Step 3: Data preprocessing**
-Visualization aids in spotting outliers, which can often be errors that have entered the dataset inadvertently. For instance, instances like actors listed with a height of 510 meters or a negative age can be identified and addressed. Furthermore, when crucial values contain NaN (missing values), the respective data entries containing these missing values are removed to maintain data integrity.
+Visualization aids in spotting outliers, which can often be errors that have entered the dataset inadvertently. For instance, instances like actors listed with a height of 510 meters or a negative age can be identified and addressed. We also need to adjust the revenue for inflation so that we compare it across eras. Furthermore, we one hot encode the categorical columns so we can use them in the model because there often is multiple categories per movie (e.g. a movie can be a comedy and a drama)
 
 **Step 4: Identification of primary or secondary role**
-By parsing summaries, we'll evaluate each character's role as primary or secondary. This distinction becomes crucial for building a model later, with the following structure: 
-Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables (to be determined), Primary actor variables (to be determined), Secondary actor variables (to be determined)
+By parsing summaries, we'll determine the primary and secondary actor for each movie. We use flair which is an NLP to get a list of every name in each summary. We then take the most and 2nd most mentioned name, make them correspond to the actors whose character shares the name and that gives us our primary and secondary actor. This distinction becomes crucial for building a model later, with the following structure: 
+Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables , Primary actor variables, Secondary actor variables
 
 #### Part 2: Features study
 **Step 5: Features study**  
   - We make visualizations to see which genres are most done by each gender. And, by doing a matching to remove cofounders, we analyse whether sex influence ratings and revenue in each genre 
   - *Space study*  
-  - We compare countries revenue and IMDB ratings so we can rank them. We run a Shapiro-Wilk to determine that they're not distributed normally. Once we see that, we use a Pruskal-Walis test to see whether the differences are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
+  - We compare countries revenue and IMDB ratings so we can rank them. We run a Shapiro-Wilk test to determine that they're not distributed normally. Once we see that, we use a Pruskal-Walis test to see whether the differences are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
   - We make plots that allow us to see changes in IMDB rating and revenue through time for each genre 
   
 #### Part 3: Model selection and assessment
@@ -70,7 +70,7 @@ Following model training, the different models are tested with the test data. We
 In this phase, we will use the models to show which specificties (e.g. runtime or actor sex) someone's movie should have based on whether he wants critical or monetary success and what type of movie he wants to make.
 
 **Step 9: Creating data story**
-To conclude our study, we will prepare a roleplay data story which shows our results interactively as well as enables user to play with our models to make wanted predictions to identify which movies would best suit him or his favorite actors.
+To conclude our study, we will prepare a data story which shows our results to answer the research questions. Furthermore, we'll allow user to play with our models to make wanted predictions to identify which movies would best suit him or his favorite actors.
 
 
 ### Timeline
