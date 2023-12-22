@@ -20,7 +20,7 @@ We eagerly anticipate your rise as the next ADAgency&trade; superstar [click her
 
 Throughout our research, we are trying to answer several questions:
 - Question on gender
-- Question on space
+- Which countries are the best to make a movie in depending on whether you want a good review or revenue and what the genre of your movie is?
 - Question on ethnicity
 - How does release year affect IMDB rating and revenue and are there any trends specific to genres?
 - Can we build a model that allows us to predict revenue and IMDB rating with high accuracy?
