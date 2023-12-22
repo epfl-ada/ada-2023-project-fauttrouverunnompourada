@@ -57,7 +57,7 @@ We split the data into a train and test dataset. We tune three different tree-ba
 Following model training, the different models are tested with the test data. We use RMSE, MAE and look at the distribution of the predictions of each model to determine which should be used for IMDB rating and which should be used for revenue.
 
 #### Part 3: Application
-**Step 7: Exploring research questions**
+**Step 7: Model Application**
 In this phase, we will use the models to show which specificties (e.g. runtime or actor sex) someone's movie should have based on whether he wants critical or monetary success and what type of movie he wants to make.
 
 **Step 8: Creating data story**
