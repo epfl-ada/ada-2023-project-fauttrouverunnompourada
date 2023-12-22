@@ -37,7 +37,7 @@ All of this scraping was made using the [OMDb API](https://www.omdbapi.com/).
 
 ### Methods
 
-#### Part 1 : Data preparation
+### Part 1 : Data preparation
 **Step 1: Familiarisation to data set and planification**
 Before jumping into a project, we take time to understand the initial data collection. The first step involves visualising the data to gauge its completeness and evaluate the project feasibility. Finally, we understand what data could be scraped to complete our dataset to achieve our goals.
 
@@ -51,7 +51,7 @@ Visualization aids in spotting outliers, which can often be errors that have ent
 By parsing summaries, we'll determine the primary and secondary actor for each movie. We use flair which is an NLP to get a list of every name in each summary. We then take the most and 2nd most mentioned name, make them correspond to the actors whose character shares the name and that gives us our primary and secondary actor. This distinction becomes crucial for building a model later, with the following structure: 
 Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables , Primary actor variables, Secondary actor variables.
 
-#### Part 2: Features study
+### Part 2: Features study
 **Step 5: Features study**  
   - We make visualizations to see which genres are most done by each gender. And, by doing a matching to remove cofounders, we analyse whether the gender influence ratings and revenue in each genre. 
   - With the ethnicities, we try to understand how does the diversity of the cast influence the revenues and ratings. To make this possible, we need to introduce a concept of distances between the different ethnicities to make them more visual. This is done with the help of the Multidimensional scaling (MDS) which consists of a collection of analysis methods for data sets that have three or more variables, which define each data point. 
@@ -59,14 +59,14 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
   - Lastly, we wanted to check how the popularity of the genres has evolved through the years. This will help us afterwards to determine and highlight trends on genres.
   - All these studies allows to understand more how the features can influence both the revenues and the public acclaim. This results in mind we can start to create the model that will help us to predict either the revenue or the movie rating based on user's selectd features.
   
-#### Part 3: Model selection and assessment
+### Part 3: Model selection and assessment
 **Step 6: Model tuning and training**
 We split the data into a train and test dataset. We tune three different tree-based models, XGBRegressor from xgboost, GradientBoostingRegressor from sklearn and RandomForestRegressor from sklearn, using cross validation. Then, we train them to predict IMDB rating and revenue. We get six different models, with 2 of each type, with one predicting revenue and the other IMDB rating.
 
 **Step 7: Model assessment and selection**
 Following model training, the different models are tested with the test data. We use RMSE, MAE and look at the distribution of the predictions of each model to determine which should be used for IMDB rating and which should be used for revenue.
 
-#### Part 4: Application
+### Part 4: Application
 **Step 8: Model Application**
 In this phase, we will use the models to show which specificties (e.g. runtime or actor sex) someone's movie should have based on whether he wants critical or monetary success and what type of movie he wants to make.
 
