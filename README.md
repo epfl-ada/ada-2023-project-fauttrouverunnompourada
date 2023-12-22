@@ -55,7 +55,6 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
   -*Space study*  
   -*Ethnicity study*  
   -*Time study*  
-  -
   
 #### Part 3: Model selection and assessment
 **Step 5: Model tuning and training**
