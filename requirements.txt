@@ -1,0 +1,11 @@
+flask
+requests
+flask_cors
+pandas
+xgboost
+# sklearn
+# math
+numpy
+matplotlib
+# from hyperopt import STATUS_OK, Trials, fmin, hp, tpe
+joblib
