@@ -50,15 +50,15 @@ By parsing summaries, we'll evaluate each character's role as primary or seconda
 Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables (to be determined), Primary actor variables (to be determined), Secondary actor variables (to be determined)
 
 #### Part 2: Model selection and assessment
-**Step 5: Model selection**
+**Step 5: Model tuning and training**
 We split the data into a train and test dataset. We tune three different tree-based models, XGBRegressor from xgboost, GradientBoostingRegressor from sklearn and RandomForestRegressor from sklearn, using cross validation. Then, we train them to predict IMDB rating and revenue. We get six different models, with 2 of each type, with one predicting revenue and the other IMDB rating.
 
-**Step 6: Model assessment**
-Following model training, the different models are tested with the test data. We use RMSE, MAE and look at the distribution of the predictions of each model to determine which should be used.
+**Step 6: Model assessment and selection**
+Following model training, the different models are tested with the test data. We use RMSE, MAE and look at the distribution of the predictions of each model to determine which should be used for IMDB rating and which should be used for revenue.
 
 #### Part 3: Application
 **Step 7: Exploring research questions**
-In this phase, we will leverage our model to address the research questions by delving into its operational intricacies and experimenting with diverse input variables.
+In this phase, we will use the models to show which specificties (e.g. runtime or actor sex) someone's movie should have based on whether he wants critical or monetary success and what type of movie he wants to make.
 
 **Step 8: Creating data story**
 To conclude our study, we will prepare a roleplay data story which shows our results interactively as well as enables user to play with our models to make wanted predictions to identify which movies would best suit him or his favorite actors.
@@ -87,11 +87,11 @@ Step 9: **Deadline Milestone 3 22.12.2023**
 
 | Agency Worker | Job |
 |:-------------:|-----|
-| Ali           | Initial data visualisation. Data cleaning. Model selection. Explore first research question.|
-| Benjamin      | Data scraping from IMDb website. Data cleaning. Model assesment. Creating data story. |
-| Foaleng       | Project plannification. Primary and secondary role indentification. Model selection. Explore third research question.|
-| Thomas        | Project plannification. Data cleaning. Primary and secondary role indentification. Model assesment. Creating data story.|
-| Yaniss        | Initial data visualisation. Data cleaning. Model selection. Explore second research question. |
+| Ali           | Initial data visualisation. Data cleaning. Exploring research question|
+| Benjamin      | Data scraping from IMDb website. Data cleaning. Primary and secondary role indentification. Explore research question. Creating data story. |
+| Foaleng       | Project plannification. Primary and secondary role indentification. Model selection. Readme and P3|
+| Thomas        | Project plannification. Data cleaning.Model selection. Model assesment. Explore research question. Creating data story.|
+| Yaniss        | Initial data visualisation. Data cleaning. Explore research question. Creating data story.|
 
 ### Questions
 
