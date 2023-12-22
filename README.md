@@ -56,7 +56,7 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
   - *Gender study*  
   - *Space study*  
   - *Ethnicity study*  
-  - *Time study*  
+  - We make plots that allow us to see changes in IMDB rating and revenue through time for each genre 
   
 #### Part 3: Model selection and assessment
 **Step 6: Model tuning and training**
