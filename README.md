@@ -12,9 +12,9 @@
 
 ADAgency&trade; is pleased to welcome you to their agency, where stars are born and dreams become reality. Our mission is very simple: making your wish come true by all means we can. Do you want to start a career to earn a lot of money in big blockbuster movies? Or is your dream to leave an eternal print on the 7th art? We can do all of that for you!
 
-Absolutely! In today's cinematic landscape, we're eager to offer our expertise to help guide your casting choices. Just fill out a quick personal form and define your goals—our algorithms will comb through countless auditions, identifying ideal matches tailored to the specific parameters crucial for achieving your starry ambitions!
+Absolutely! In today's cinematic landscape, we are eager to offer our expertise to help guide your casting choices. Just fill out a quick personal form and define your goals—our algorithms will identify the ideal audition parameters to look out for tailored to you and your starry ambitions!
 
-We eagerly anticipate your rise as the next ADAgency&trade; superstar [click here](https://benjaminaouzir.github.io/adagency-inc/)(Datastory) to join us!
+We eagerly anticipate your rise as the next ADAgency&trade; superstar [click here](https://benjaminaouzir.github.io/adagency-inc/) (Datastory) to join us!
 
 ### Research Questions
 
