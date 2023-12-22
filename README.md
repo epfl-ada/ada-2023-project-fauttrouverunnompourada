@@ -19,9 +19,11 @@ We eagerly anticipate your rise as the next ADAgency&trade; superstar [click her
 ### Research Questions
 
 Throughout our research, we are trying to answer several questions:
-- Find out which auditions (external data) best suit an actor in respect to his career goal (critical or monetary focused) as well as his previous experience and characteristics. 
-- Does the suitable actor differ based on the desired outcome: critical acclaim or financial success?
-- What impact does an actor's previous experience have on a movie's success?
+- Question on gender
+- Question on space
+- Question on ethnicity
+- Question on time
+- Can we build a model that allows us to predict revenue and IMDB rating with high accuracy
 
 ### Additional datasets
 
@@ -42,7 +44,7 @@ Before jumping into a project, we take time to understand the initial data colle
 **Step 2: Data scraping**
 Actors are typically driven by either financial gain or prestige. Therefore, it's essential to enhance our dataset by incorporating a metric for film prestige. We opted for IMDB movie ratings to fulfill this requirement. Additionally, we're leveraging the IMDB dataset to supplement our movie box office revenue data. Once again, visualization is employed to validate and deepen our comprehension of the data.
 
-**Step 3: Cleaning of data**
+**Step 3: Data preprocessing**
 Visualization aids in spotting outliers, which can often be errors that have entered the dataset inadvertently. For instance, instances like actors listed with a height of 510 meters or a negative age can be identified and addressed. Furthermore, when crucial values contain NaN (missing values), the respective data entries containing these missing values are removed to maintain data integrity.
 
 **Step 4: Identification of primary or secondary role**
@@ -94,11 +96,11 @@ Step 9: **Deadline Milestone 3 22.12.2023**
 
 | Agency Worker | Job |
 |:-------------:|-----|
-| Ali           | Initial data visualisation. Data cleaning. Exploring research question|
-| Benjamin      | Data scraping from IMDb website. Data cleaning. Primary and secondary role indentification. Explore research question. Creating data story. |
+| Ali           | Initial data visualisation. Data cleaning. Ethnicity study. Creating data story|
+| Benjamin      | Data scraping from IMDb website. Data cleaning. Primary and secondary role indentification. Gender Study. Creating data story. |
 | Foaleng       | Project plannification. Primary and secondary role indentification. Model selection. Readme and P3|
-| Thomas        | Project plannification. Data cleaning.Model selection. Model assesment. Explore research question. Creating data story.|
-| Yaniss        | Initial data visualisation. Data cleaning. Explore research question. Creating data story.|
+| Thomas        | Project plannification. Data cleaning.Model selection. Model assesment. Time study. Model application|
+| Yaniss        | Initial data visualisation. Data cleaning. Space study. Creating data story.|
 
 ### Questions
 
