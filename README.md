@@ -51,10 +51,10 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
 
 #### Part 2: Features study
 **Step 4: Features study**  
-  -*Gender study*  
-  -*Space study*  
-  -*Ethnicity study*  
-  -*Time study*  
+  - *Gender study*  
+  - *Space study*  
+  - *Ethnicity study*  
+  - *Time study*  
   
 #### Part 3: Model selection and assessment
 **Step 5: Model tuning and training**
