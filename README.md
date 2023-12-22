@@ -19,7 +19,7 @@ We eagerly anticipate your rise as the next ADAgency&trade; superstar [click her
 ### Research Questions
 
 Throughout our research, we are trying to answer several questions:
-- Question on gender
+- How does the gender of the lead in a movie affect the revenue and IMDB rating in different genres ?
 - Which countries are the best to make a movie in depending on whether you want a good review or revenue and what the genre of your movie is?
 - Question on ethnicity
 - How does release year affect IMDB rating and revenue and are there any trends specific to genres?
@@ -55,7 +55,7 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
 **Step 5: Features study**  
   - *Gender study*  
   - *Space study*  
-  - *Ethnicity study*  
+  - We compare countries revenue and IMDB ratings so we can rank them. We run a Shapiro-Wilk to determine that they're not distributed normally. Once we see that, we use a Pruskal-Walis test to see whether the differences are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
   - We make plots that allow us to see changes in IMDB rating and revenue through time for each genre 
   
 #### Part 3: Model selection and assessment
