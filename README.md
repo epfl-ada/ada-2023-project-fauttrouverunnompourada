@@ -55,8 +55,8 @@ Output: Box office revenue (focused on financial success) or Critics' ratings (f
 **Step 5: Features study**  
   - We make visualizations to see which genres are most done by each gender. And, by doing a matching to remove cofounders, we analyse whether the gender influence ratings and revenue in each genre. 
   - With the ethnicities, we try to understand how does the diversity of the cast influence the revenues and ratings. To make this possible, we need to introduce a concept of distances between the different ethnicities to make them more visual. This is done with the help of the Multidimensional scaling (MDS) which consists of a collection of analysis methods for data sets that have three or more variables, which define each data point. 
-  - We compare countries revenue and IMDB ratings so we can give an answer on the best country to produce the movie. A Shapiro-Wilk test allowed us to determine that countries were not distributed normally. Once this observation made, we use a Pruskal-Walis test to see whether the differences between the revenues are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
-  - Lastly, we wanted to check how has evolved the popularity of the genres through the years. This will help us afterwards to determine and highlight trends on genres.
+  - We compare countries revenue and IMDB ratings so we can give an answer on the best country to produce the movie. A Shapiro-Wilk test allows us to determine that countries were not distributed normally. Once this observation is made, we use a Pruskal-Walis test to see whether the differences between the revenues are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
+  - Lastly, we wanted to check how the popularity of the genres has evolved through the years. This will help us afterwards to determine and highlight trends on genres.
   - All these studies allows to understand more how the features can influence both the revenues and the public acclaim. This results in mind we can start to create the model that will help us to predict either the revenue or the movie rating based on user's selectd features.
   
 #### Part 3: Model selection and assessment
@@ -71,7 +71,7 @@ Following model training, the different models are tested with the test data. We
 In this phase, we will use the models to show which specificties (e.g. runtime or actor sex) someone's movie should have based on whether he wants critical or monetary success and what type of movie he wants to make.
 
 **Step 9: Creating data story**
-To conclude our study, we will prepare a data story which shows our results to answer the research questions. Furthermore, we'll allow user to play with our models to make wanted predictions to identify which movies would best suit him or his favorite actors.
+To conclude our study, we will prepare a data story which shows our results to answer the research questions. Furthermore, we'll allow the user to play with our models to make wanted predictions to identify which movies would best suit him or his favorite actors.
 
 
 ### Timeline
