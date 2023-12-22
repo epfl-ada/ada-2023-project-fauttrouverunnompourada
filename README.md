@@ -19,11 +19,11 @@ We eagerly anticipate your rise as the next ADAgency&trade; superstar [click her
 ### Research Questions
 
 Throughout our research, we are trying to answer several questions:
-- How does the gender of the lead in a movie affect the revenue and IMDB rating in different genres ?
+- How does the gender of the lead actor in a movie affect the revenue and movie rating in different genres ?
 - Which countries are the best to make a movie in depending on whether you want a good review or revenue and what the genre of your movie is?
-- Question on ethnicity
-- How does release year affect IMDB rating and revenue and are there any trends specific to genres?
-- Can we build a model that allows us to predict revenue and IMDB rating with high accuracy?
+- How does the diversity of the casting affect both the revenue and movie rating ?
+- How does release year affect movie rating and revenue and are there any trends specific to genres?
+- Can we build a model that allows us to predict revenue and movie rating with high accuracy?
 
 ### Additional datasets
 
@@ -42,21 +42,22 @@ All of this scraping was made using the [OMDb API](https://www.omdbapi.com/).
 Before jumping into a project, we take time to understand the initial data collection. The first step involves visualising the data to gauge its completeness and evaluate the project feasibility. Finally, we understand what data could be scraped to complete our dataset to achieve our goals.
 
 **Step 2: Data scraping**
-Actors are typically driven by either financial gain or prestige. Therefore, it's essential to enhance our dataset by incorporating a metric for film prestige. We opted for IMDB movie ratings to fulfill this requirement. Additionally, we're leveraging the IMDB dataset to supplement our movie box office revenue data. Once again, visualization is employed to validate and deepen our comprehension of the data.
+An aspect that was not present in the original dataset is the movie ratings, that we took from the IMDb website, along with the nominations and awards. We then used the movie summaries to proceed the identification of primary and secondary actors based on the number of apparitions of their character in each summary. This was done thanks to Flair as a Natural Language Processing (NLP) to extract character names. 
 
 **Step 3: Data preprocessing**
-Visualization aids in spotting outliers, which can often be errors that have entered the dataset inadvertently. For instance, instances like actors listed with a height of 510 meters or a negative age can be identified and addressed. We also need to adjust the revenue for inflation so that we compare it across eras. Furthermore, we one hot encode the categorical columns so we can use them in the model because there often is multiple categories per movie (e.g. a movie can be a comedy and a drama)
+Visualization aids in spotting outliers, which can often be errors that have entered the dataset inadvertently. For instance, instances like actors listed with a height of 510 meters or a negative age can be identified and addressed. We also need to adjust the revenue for inflation so that we compare it across eras. Furthermore, we perform one hot encoding transformation of the categorical data so we can use them in the model. We also need to modify some of the genres as there is often multiple categories per movie.
 
 **Step 4: Identification of primary or secondary role**
 By parsing summaries, we'll determine the primary and secondary actor for each movie. We use flair which is an NLP to get a list of every name in each summary. We then take the most and 2nd most mentioned name, make them correspond to the actors whose character shares the name and that gives us our primary and secondary actor. This distinction becomes crucial for building a model later, with the following structure: 
-Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables , Primary actor variables, Secondary actor variables
+Output: Box office revenue (focused on financial success) or Critics' ratings (focused on prestige) Input: Movie-specific variables , Primary actor variables, Secondary actor variables.
 
 #### Part 2: Features study
 **Step 5: Features study**  
-  - We make visualizations to see which genres are most done by each gender. And, by doing a matching to remove cofounders, we analyse whether sex influence ratings and revenue in each genre 
-  - *Space study*  
-  - We compare countries revenue and IMDB ratings so we can rank them. We run a Shapiro-Wilk test to determine that they're not distributed normally. Once we see that, we use a Pruskal-Walis test to see whether the differences are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
-  - We make plots that allow us to see changes in IMDB rating and revenue through time for each genre 
+  - We make visualizations to see which genres are most done by each gender. And, by doing a matching to remove cofounders, we analyse whether the gender influence ratings and revenue in each genre. 
+  - With the ethnicities, we try to understand how does the diversity of the cast influence the revenues and ratings. To make this possible, we need to introduce a concept of distances between the different ethnicities to make them more visual. This is done with the help of the Multidimensional scaling (MDS) which consists of a collection of analysis methods for data sets that have three or more variables, which define each data point. 
+  - We compare countries revenue and IMDB ratings so we can give an answer on the best country to produce the movie. A Shapiro-Wilk test allowed us to determine that countries were not distributed normally. Once this observation made, we use a Pruskal-Walis test to see whether the differences between the revenues are significant. To see whether there's a correlation between revenue and rating, we run a Pearson linear regression.
+  - Lastly, we wanted to check how has evolved the popularity of the genres through the years. This will help us afterwards to determine and highlight trends on genres.
+  - All these studies allows to understand more how the features can influence both the revenues and the public acclaim. This results in mind we can start to create the model that will help us to predict either the revenue or the movie rating based on user's selectd features.
   
 #### Part 3: Model selection and assessment
 **Step 6: Model tuning and training**
@@ -98,8 +99,8 @@ Step 9: **Deadline Milestone 3 22.12.2023**
 |:-------------:|-----|
 | Ali           | Initial data visualisation. Data cleaning. Ethnicity study. Creating data story|
 | Benjamin      | Data scraping from IMDb website. Data cleaning. Primary and secondary role indentification. Gender Study. Creating data story. |
-| Foaleng       | Project plannification. Primary and secondary role indentification. Model selection. Readme and P3|
-| Thomas        | Project plannification. Data cleaning.Model selection. Model assesment. Time study. Model application|
+| Foaleng       | Project plannification. Primary and secondary role indentification. Model selection. ReadME and P3|
+| Thomas        | Project plannification. Data cleaning. Model selection. Model assesment. Time study. Model application|
 | Yaniss        | Initial data visualisation. Data cleaning. Space study. Creating data story.|
 
 ### Questions
